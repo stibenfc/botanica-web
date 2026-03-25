@@ -1,0 +1,414 @@
+:root {
+    --dorado: #d4af37;
+    --dorado-brillante: #f1c40f; /* Añade esta línea */
+    --gris-header: #1f1f1f;
+    --oscuro: #0c0c0c;
+    --blanco: #f5f5f5;
+    --fuente-titulos: 'Cinzel', serif;
+    --fuente-cuerpo: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    font-family: var(--fuente-cuerpo);
+}
+
+/* HEADER Y NAVEGACIÓN */
+.main-header {
+    background-color: var(--gris-header);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--dorado);
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- NUEVA CONFIGURACIÓN DEL LOGO AGRUPADO (CSS) --- */
+
+/* 1. Contenedor principal: Alinea símbolo y texto en fila */
+/* --- AJUSTE DE TAMAÑO PARA LOGO Y TEXTO --- */
+
+.logo-container {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.logo-simbolo {
+    max-width: 95px; /* Tamaño aumentado */
+    height: auto;
+    display: block;
+}
+
+.linea-superior {
+    font-family: var(--fuente-titulos);
+    font-size: 1.7rem; /* Texto más grande y llamativo */
+    color: var(--dorado);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.linea-inferior {
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.9rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+/* Ajuste para que en pantallas medianas no se vea gigante */
+@media (max-width: 1100px) {
+    .linea-superior { font-size: 1.5rem; }
+    .linea-inferior { font-size: 0.9rem; }
+    .logo-simbolo { max-width: 75px; }
+}
+    
+    .logo-container {
+        justify-content: center; /* Centra el conjunto símbolo+texto en móvil */
+    }
+}
+
+.expert-label { color: var(--dorado); font-weight: bold; display: block; font-size: 0.8rem; }
+.expert-services { font-size: 0.9rem; color: #ccc; }
+
+.btn-top {
+    background: var(--dorado);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-top:hover { background: #f1c40f; transform: scale(1.05); }
+
+.sub-menu { background: #111; padding: 5px 0; }
+.sub-menu ul { display: flex; justify-content: center; list-style: none; flex-wrap: wrap; }
+.sub-menu a { color: #fff; text-decoration: none; padding: 10px 20px; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
+.sub-menu a:hover { color: var(--dorado); }
+
+/* SECCIONES PRINCIPALES */
+.hero-bg {
+    /* Actualizado para usar el archivo .png que descargaste */
+    background: url('images/amarre-exitoso-limpio.png') no-repeat center center/cover;
+    
+    /* Mantén el resto de las propiedades igual */
+    height: 80vh; 
+    margin-top: 110px; 
+    width: 100%;
+    position: relative;
+    z-index: 1; 
+}
+
+.hero-overlay {
+    background: rgba(0,0,0,0.65);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-text h1 { font-family: var(--fuente-titulos); color: var(--dorado); font-size: 3rem; margin-bottom: 20px; }
+.hero-text p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px; }
+
+.cta-button {
+    background-color: var(--dorado);
+    color: black;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 1.1rem;
+}
+
+/* MAESTRO JOSE */
+.maestro-jose { padding: 80px 10%; background: var(--oscuro); }
+.maestro-jose h2 { color: var(--dorado); font-family: var(--fuente-titulos); margin-bottom: 25px; text-align: center; }
+.check-list ul { list-style: none; margin: 30px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.check-list li { color: #ddd; font-size: 1.1rem; }
+.final-call { text-align: center; font-weight: 600; color: var(--dorado); margin-top: 30px; }
+
+/* 7. EXPERIENCIA STATS (ESTILOS FALTANTES) */
+.experiencia-stats {
+    display: flex;
+    justify-content: space-around;
+    background: #1a1a1a;
+    padding: 50px 10%;
+    text-align: center;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.stat-item strong { display: block; font-size: 2.5rem; color: var(--dorado); font-family: var(--fuente-titulos); }
+.stat-item span { color: #ccc; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+
+/* 8. AUDIOS */
+.audios-section { padding: 80px 10%; text-align: center; }
+.audios-section h2 { font-family: var(--fuente-titulos); color: var(--dorado); margin-bottom: 40px; }
+.audio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.audio-card { background: #1a1a1a; padding: 25px; border-radius: 15px; border: 1px solid #333; }
+.audio-card p { margin-bottom: 15px; color: var(--dorado); font-weight: 600; }
+audio { width: 100%; filter: sepia(100%) saturate(70%) hue-rotate(10deg); }
+
+/* 10. BOTONES FLOTANTES */
+.float-wa {
+    position: fixed;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    background: #25d366;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    z-index: 2000;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.float-wa:hover { transform: translateY(-5px); }
+.float-wa img { width: 22px; margin-right: 10px; }
+.left-wa { left: 25px; }
+.right-wa { right: 25px; }
+
+/* FOOTER */
+.footer { padding: 40px; text-align: center; border-top: 1px solid #333; font-size: 0.9rem; color: #666; }
+.disclaimer { margin-top: 15px; font-style: italic; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .top-header { flex-direction: column; gap: 15px; }
+    .hero-text h1 { font-size: 2rem; }
+    .check-list ul { grid-template-columns: 1fr; }
+    .experiencia-stats { flex-direction: column; gap: 30px; }
+}
+
+/* --- ESTILOS PARA EL EFECTO MÁQUINA DE ESCRIBIR --- */
+
+/* Color y tamaño para 'Expertos en' (gris o dorado suave) */
+.expert-label {
+    color: var(--dorado); /* Mantiene tu color original */
+    font-weight: bold;
+    font-size: 0.8rem;
+    display: inline-block; /* Importante para que no salte de línea */
+    margin-right: 5px; /* Espacio con el texto animado */
+}
+
+/* Color dorado brillante para el texto animado (como en el hover) */
+.typed-text-color {
+    color: var(--dorado-brillante); /* Color brillante al escribir */
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: var(--fuente-cuerpo);
+    text-transform: uppercase; /* Para mantener la estética de lista */
+}
+
+/* El cursor parpadeante | (efecto de tu imagen 2) */
+.typed-cursor {
+    opacity: 1;
+    color: var(--dorado-brillante);
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+/* Animación para el parpadeo del cursor */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Ajuste responsive para móviles */
+@media (max-width: 768px) {
+    .header-info {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* --- ESTILOS PARA EL NUEVO TEXTO DEL HEADER-CTA --- */
+
+/* 1. Agrupamos el contenedor para apilar los elementos */
+.header-cta {
+    display: flex;
+    flex-direction: column; /* Apila texto arriba y botón abajo */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+}
+
+/* 2. Estilo para el texto persuasivo "¿Qué esperas para comunicarte?" */
+.cta-encabezado {
+    font-family: var(--fuente-cuerpo); /* Montserrat para legibilidad */
+    font-size: 0.85rem; /* Tamaño discreto para el header */
+    color: var(--blanco); /* Color blanco o gris claro */
+    margin-bottom: 8px; /* Espacio con el botón de abajo */
+    font-weight: 300; /* Un poco más ligero */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ajuste responsive para celulares */
+@media (max-width: 768px) {
+    .header-cta {
+        margin-top: 15px; /* Da espacio si el header se apila */
+    }
+}
+
+/* --- ESTILOS PARA LA ADVERTENCIA DE EDAD --- */
+
+.advertencia-edad {
+    background-color: var(--oscuro); /* Mismo fondo negro de la web */
+    padding: 25px 5%;
+    border-top: 2px solid #e67e22; /* Borde naranja/dorado suave arriba */
+    border-bottom: 2px solid #e67e22; /* Borde naranja/dorado suave abajo */
+    text-align: center;
+    margin-top: 60px; /* Espacio con la sección anterior */
+}
+
+.container-advertencia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre los iconos y el texto */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.icono-advertencia {
+    font-size: 2rem; /* Tamaño del icono */
+    color: #e67e22; /* Color naranja/dorado para el icono */
+    opacity: 0.9;
+}
+
+.texto-restriccion {
+    font-family: var(--fuente-cuerpo); /* Montserrat */
+    font-size: 1.1rem;
+    color: var(--blanco); /* Color de texto blanco/gris claro */
+    line-height: 1.4;
+}
+
+.texto-restriccion strong {
+    color: var(--dorado); /* Palabra "Atención" en dorado */
+    font-weight: 600;
+}
+
+/* Ajuste responsive para celulares */
+@media (max-width: 768px) {
+    .container-advertencia {
+        flex-direction: column; /* Apila iconos y texto en móvil */
+        gap: 10px;
+    }
+    
+    .advertencia-edad {
+        padding: 20px 5%;
+    }
+    
+    .texto-restriccion {
+        font-size: 0.95rem;
+    }
+}
+/* --- SECCIÓN NUESTROS SERVICIOS --- */
+.servicios-seccion {
+    padding: 80px 5%;
+    background-color: var(--oscuro);
+    text-align: center;
+}
+
+.servicios-seccion h2 {
+    font-family: var(--fuente-titulos);
+    color: var(--dorado);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.servicios-intro {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Rejilla de 3 columnas */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicio-card {
+    background: #1a1a1a; /* Gris muy oscuro como el header */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--dorado);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.servicio-card .img-wrapper {
+    height: 200px;
+    overflow: hidden;
+}
+
+.servicio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.servicio-card:hover img {
+    transform: scale(1.1);
+}
+
+.servicio-card h3 {
+    padding: 20px 15px 10px;
+    color: var(--dorado);
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.servicio-card p {
+    padding: 0 20px 25px;
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Ajustes móviles */
+@media (max-width: 768px) {
+    .servicios-seccion h2 { font-size: 2rem; }
+    .servicios-grid { grid-template-columns: 1fr; }
+}
