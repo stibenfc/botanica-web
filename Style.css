@@ -412,3 +412,152 @@ audio { width: 100%; filter: sepia(100%) saturate(70%) hue-rotate(10deg); }
     .servicios-seccion h2 { font-size: 2rem; }
     .servicios-grid { grid-template-columns: 1fr; }
 }
+
+/* =============================================
+   ✅ NUEVOS ESTILOS — CONTACTO Y REDES SOCIALES
+   ============================================= */
+
+.contacto-seccion {
+    padding: 80px 5%;
+    background: #111;
+    text-align: center;
+}
+
+.contacto-seccion h2 {
+    font-family: var(--fuente-titulos);
+    color: var(--dorado);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contacto-intro {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contacto-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.contacto-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: var(--blanco);
+    transition: 0.3s;
+    min-width: 260px;
+}
+
+.contacto-card:hover {
+    border-color: #25d366;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(37,211,102,0.2);
+}
+
+.contacto-card.urgencia:hover {
+    border-color: var(--dorado);
+    box-shadow: 0 8px 20px rgba(212,175,55,0.2);
+}
+
+.contacto-card img {
+    width: 36px;
+    height: 36px;
+}
+
+.contacto-card strong {
+    display: block;
+    font-size: 1rem;
+    color: #25d366;
+    margin-bottom: 4px;
+}
+
+.contacto-card.urgencia strong {
+    color: var(--dorado);
+}
+
+.contacto-card span {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Redes sociales */
+.redes-titulo {
+    color: #aaa;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.redes-grid {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.red-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.red-social svg {
+    width: 20px;
+    height: 20px;
+}
+
+.red-social.facebook { background: #1877F2; }
+.red-social.facebook:hover { background: #0d65da; transform: translateY(-3px); }
+
+.red-social.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.red-social.instagram:hover { opacity: 0.9; transform: translateY(-3px); }
+
+.red-social.tiktok { background: #010101; border: 1px solid #333; }
+.red-social.tiktok:hover { border-color: #fff; transform: translateY(-3px); }
+
+/* Footer links legales */
+.footer-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-links a:hover { color: var(--dorado); }
+.footer-links span { color: #555; }
+
+/* Responsive contacto */
+@media (max-width: 768px) {
+    .contacto-grid { flex-direction: column; align-items: center; }
+    .contacto-card { width: 100%; max-width: 340px; justify-content: center; }
+    .redes-grid { gap: 12px; }
+    .red-social { padding: 10px 18px; font-size: 0.85rem; }
+}

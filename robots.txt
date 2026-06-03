@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /privacidad.html
+Disallow: /terminos.html
+
+Sitemap: https://www.botanicamagicablanca.com/sitemap.xml
